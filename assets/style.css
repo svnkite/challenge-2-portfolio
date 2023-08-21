@@ -1,2 +1,275 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+:root {
+    --dark: #051f20;
+    --med-dark: #0B2B26;
+    --med: #163832;
+    --med-light: #235347;
+    --light: #8EB69B;
+    --ex-light: #DAF1DE;
+    --font: 'Montserrat', serif;
+}
 
+body {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--ex-light);
+}
+
+h1 {
+    color: var(--ex-light);
+    font-size: 60px;
+    font-family: var(--font);
+}
+
+h2 {
+    ;
+}
+
+header {
+    display: flex;
+    padding: 42px;
+    background: var(--dark);
+    background-image: url("./images/city_presskit.png");
+    background-position: center 17%;
+    color: var(--light);
+    border-radius: 40px 40px 0px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    border-radius: 0px 0px 40px 40px;
+}
+
+nav a {
+    background-color: var(--dark);
+    font-size: 40px;
+    color: var(--light);
+    align-content: center;
+    font-family: 'Montserrat', serif;
+    padding: 60px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    transition: .5s background-color;
+    background-color: var(--med-light);
+    color: var(--dark);
+    font-weight: bolder;
+}
+
+main {
+    column-count: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+
+    display: inline-flex;
+    padding: 40px;
+}
+
+img {
+    max-height: max-content;
+    max-width: min-content;
+    opacity: .5;
+}
+
+.column1 {
+    padding-right: calc(2%);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: var(--font);
+    font-size: calc(100%);
+}
+
+.column2 {
+    align-items: center;
+}
+
+.column3 {
+    padding: calc(5%);
+    display: flex;
+    align-content: flex-start;
+    font-family: var(--font);
+}
+
+.divider {
+    justify-content: center;
+    height: calc(100%);
+    top: 0;
+}
+
+.about-content {
+    padding: calc(10%);
+    font-family: var(--font);
+}
+
+.work-content {
+    padding: calc(10%);
+    font-family: var(--font);
+}
+
+.contact-content {
+    padding: calc(10%);
+    font-family: var(--font);
+}
+
+.button {
+    display: inline-flex;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: var(--ex-light);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  .button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--med-light);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:hover:before {
+    width: 100%;
+  }
+  
+
+  /*cards*/
+  
+
+  @supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+     -webkit-mask: none;
+     color: #fff;
+    }
+  }
+
+@media screen and (max-width: 992px) {
+
+    main,
+    nav {
+        flex-direction: column;
+    }
+    main,
+    header, {
+        max-width: fill;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    main,
+    nav {
+        flex-direction: column;
+    }
+    main,
+    header, {
+        max-width: fill;
+    }
+    image{
+        max-width: 15%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    main,
+    nav {
+        flex-direction: column;
+    }
+    main,
+    header, {
+        max-width: fill;
+    }
+}
+
+
+
+/* Back to top button */
+@media only screen and (max-width: 1023px) {
+    #scrolltotop_parent {
+        bottom: 25px !important;
+        right: 25px !important;
+    }
+}
+
+#scrolltotop_parent {
+    background: var(--dark);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1004 !important;
+    border-radius: 40px;
+}
+
+#scrolltotop_parent:hover {
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.scrolltotop_circle {
+    border-radius: 50%;
+}
+
+.scrolltotop_round_corners {
+    border-radius: 5px;
+}
+
+.scrolltotop_fadeout {
+    opacity: 0 !important;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.scrolltotop_fadein {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#scrolltotop_arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    margin: 0 auto;
+    margin-top: 19px;
+}
+
+#scrolltotop_arrow:focus {
+    opacity: 0.7;
+    transition: 0.1s;
+}

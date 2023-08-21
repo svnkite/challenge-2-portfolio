@@ -16,3 +16,8 @@ SVNKITE
 
 ## Version History
 * 0.0.1 
+
+## Credits
+
+Header background image by https://opengameart.org/users/quantiset
+Responsive JavaScript ScrollToTop Arrow by Fabian Lin
