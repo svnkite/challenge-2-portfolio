@@ -9,3 +9,10 @@ This project was primarily created to create a sample for creating a portfolio t
 ### Dependencies
 
 N/A
+
+## Authors
+
+SVNKITE
+
+## Version History
+* 0.0.1 
