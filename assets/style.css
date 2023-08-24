@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
 :root {
     --dark: #051f20;
     --med-dark: #0B2B26;
@@ -25,6 +27,17 @@ h1 {
 h2 {
     ;
 }
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
 
 header {
     display: flex;
@@ -68,14 +81,19 @@ main {
 
 section {
 
-    display: inline-flex;
+    display: flex;
     padding: 40px;
+    flex-wrap: nowrap;
 }
 
 img {
     max-height: max-content;
     max-width: min-content;
+}
+.divider-img {
+
     opacity: .5;
+
 }
 
 .column1 {
@@ -105,9 +123,12 @@ img {
 }
 
 .about-content {
-    padding: calc(10%);
+    padding: calc(12%) 0;
+    text-align: center;
     font-family: var(--font);
+    font-size: calc(150%);
 }
+
 
 .work-content {
     padding: calc(10%);
@@ -115,10 +136,12 @@ img {
 }
 
 .contact-content {
-    padding: calc(10%);
+    padding: calc(12%) 0;
+    align-items: center;
     font-family: var(--font);
 }
 
+/* contact links */
 .button {
     display: inline-flex;
     padding: 0.75rem 1.25rem;
@@ -164,14 +187,83 @@ img {
   
 
   /*cards*/
+
+  .cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: var(--light);
+    text-shadow: 1px 1px 2px var(--med), 0 0 1em var(--dark), 0 0 0.2em var(--dark);
+  }
+  
+  .title-black {
+    color: black;
+  }
   
 
-  @supports not (-webkit-mask-clip: text) {
-    figure figcaption {
-     -webkit-mask: none;
-     color: #fff;
-    }
+  
+  /*
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
   }
+  */
+
+  /*end cards*/
 
 @media screen and (max-width: 992px) {
 
@@ -179,10 +271,22 @@ img {
     nav {
         flex-direction: column;
     }
-    main,
-    header, {
-        max-width: fill;
+    .divider {
+        display: none;
     }
+    section {
+        display: flex;
+    }
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+    a:active { text-decoration: none; }
 }
 
 @media screen and (max-width: 768px) {
@@ -195,10 +299,22 @@ img {
     header, {
         max-width: fill;
     }
-    image{
-        max-width: 15%;
-        padding: 0;
+   .divider {
+        display: none;
     }
+    section {
+        display: flex;
+    }
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+    a:active { text-decoration: none; }
 }
 
 @media screen and (max-width: 576px) {
@@ -209,8 +325,30 @@ img {
     }
     main,
     header, {
-        max-width: fill;
+        max-width: 100%;
     }
+    .divider {
+        display: none;
+    }
+    section {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+      }
+
+      a:link { text-decoration: none; }
+
+
+      a:visited { text-decoration: none; }
+      
+      
+      a:hover { text-decoration: none; }
+      
+      
+      a:active { text-decoration: none; }
 }
 
 

@@ -1,3 +1,5 @@
+![Alt text](./assets/images/sample%20port%20img.png)
+
 # A Simple Portfolio 
 
 A portfolio to display different work samples
@@ -20,4 +22,8 @@ SVNKITE
 ## Credits
 
 Header background image by https://opengameart.org/users/quantiset
+
+
 Responsive JavaScript ScrollToTop Arrow by Fabian Lin
+
+## [View the application! ==>](https://svnkite.github.io/challenge-2-portfolio)
